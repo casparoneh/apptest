@@ -39,8 +39,15 @@ const About = ({ about, categories }) => {
 
 
 export async function getServerSideProps() {
+<<<<<<< HEAD
   const data = await fetch("http://localhost:3000/api/about");
   const categories = await fetch("http://localhost:3000/api/categories");
+=======
+
+
+  const data = await fetch(`https://ganigeci.vercel.app/api/about`);
+  const categories = await fetch(`https://ganigeci.vercel.app/api/categories`);
+>>>>>>> ac288449995cfec12a8132f1454aabb6a5de49a8
 
   const response = await data.json();
   const categoriesResponse = await categories.json();
