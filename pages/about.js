@@ -45,8 +45,8 @@ const About = ({ about, categories }) => {
 export async function getServerSideProps() {
 
 
-  const data = await fetch(`https://localhost/api/about`);
-  const categories = await fetch(`https://localhost/api/categories`);
+  const data = await fetch(`/api/about`);
+  const categories = await fetch(`/api/categories`);
 
   const response = await data.json();
   const categoriesResponse = await categories.json();
