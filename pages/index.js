@@ -20,7 +20,7 @@ const HomePage = ({ foods }) => {
 
 export default HomePage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await fetch("http://localhost:3000/api/items");
 
   const response = await data.json();

@@ -38,7 +38,7 @@ const About = ({ about, categories }) => {
 };
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await fetch("http://localhost:3000/api/about");
   const categories = await fetch("http://localhost:3000/api/categories");
 
