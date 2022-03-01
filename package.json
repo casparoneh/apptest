@@ -2,9 +2,9 @@
   "name": "ushtrimenextjs",
   "private": true,
   "scripts": {
-    "dev": "next start -p 8111",
+    "dev": "next start",
     "build": "next build",
-    "start": "next start -p 8111",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
