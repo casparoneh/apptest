@@ -1,5 +1,8 @@
 import React from "react";
 
+const port = process.env.PORT;
+
+
 const HomePage = ({ foods }) => {
   return (
     <div>
@@ -21,7 +24,7 @@ const HomePage = ({ foods }) => {
 export default HomePage;
 
 export async function getServerSideProps() {
-  const data = await fetch("http://localhost:3000/api/items");
+  const data = await fetch(`http://localhost:${port}/api/items`);
 
   const response = await data.json();
 

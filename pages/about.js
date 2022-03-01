@@ -2,6 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Sidebar from "../components/Sidebar";
 
+
+const port = process.env.PORT;
+
+
 const About = ({ about, categories }) => {
   const { MainImage, Title, firstPartContent, secondPartContent, subTitle } =
     about[0].fields;
@@ -39,8 +43,10 @@ const About = ({ about, categories }) => {
 
 
 export async function getServerSideProps() {
-  const data = await fetch("http://localhost:3000/api/about");
-  const categories = await fetch("http://localhost:3000/api/categories");
+
+
+  const data = await fetch(`http://localhost:${port}/api/about`);
+  const categories = await fetch(`http://localhost:${port}/api/categories`);
 
   const response = await data.json();
   const categoriesResponse = await categories.json();
