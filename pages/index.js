@@ -24,7 +24,7 @@ const HomePage = ({ foods }) => {
 export default HomePage;
 
 export async function getServerSideProps() {
-  const data = await fetch(`https://endritijom-19obl68tw-casparoneh.vercel.app/api/items`);
+  const data = await fetch(`https://ganigeci.vercel.app/api/items`);
 
   const response = await data.json();
 

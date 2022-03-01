@@ -45,8 +45,8 @@ const About = ({ about, categories }) => {
 export async function getServerSideProps() {
 
 
-  const data = await fetch(`https://endritijom-19obl68tw-casparoneh.vercel.app/api/about`);
-  const categories = await fetch(`https://endritijom-19obl68tw-casparoneh.vercel.app/api/categories`);
+  const data = await fetch(`https://ganigeci.vercel.app/api/about`);
+  const categories = await fetch(`https://ganigeci.vercel.app/api/categories`);
 
   const response = await data.json();
   const categoriesResponse = await categories.json();
