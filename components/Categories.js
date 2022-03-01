@@ -10,7 +10,7 @@ const Categories = ({ categories }) => {
 
         return (
           <div key={index} className="ml-12">
-            <Image src={categoryIcon[0].url} width="80px" height="80px" />
+            <Image alt={CategoryName} src={categoryIcon[0].url} width={80} height={80} />
             <h3 className="text-3xl text-amber-600">{CategoryName}</h3>
           </div>
         );
