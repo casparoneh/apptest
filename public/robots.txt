@@ -2,6 +2,5 @@
 User-agent: *
 Allow: /
 
-# User agent "Googlebot" should not crawl the `https://apptest-ihaqa5eoa-casparoneh.vercel.app/nogooglebot/` folder or any of its subdirectories.
 User-agent: Googlebot
 Disallow: /nogooglebot/
