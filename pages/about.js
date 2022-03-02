@@ -17,12 +17,23 @@ const About = ({ about, categories, lastsPosts }) => {
       </Head>
 
       <div className="container mx-auto flex 	flex-wrap">
-        <div className="sm:w-full 2xl:w-8/12">
-          <h1 className="font-mono text-2xl text-orange-700 ">{Title}</h1>
+        <div className="w-8/12">
+          <h1 className="font-mono text-2xl text-orange-700">{Title}</h1>
 
           <p className="text-gray-700 my-4 text-justify">{firstPartContent}</p>
 
-          <div style={{ position: "relative", width: "100%", height: "500px" }}>
+          {/*        
+            <Image
+              src={MainImage[0].url}
+              alt="Sunset"
+              width="100%"
+              height={50}          
+              layout="responsive"
+            /> */}
+
+          <div
+            style={{ position: "relative", width: "100%", height: "500px" }}
+          >
             <Image
               src={MainImage[0].url}
               alt="Sunset"
