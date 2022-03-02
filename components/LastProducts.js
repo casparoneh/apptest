@@ -11,19 +11,22 @@ const LastProducts = ({ lastsPosts }) => {
 
         return (
           <div key={key} className="flex flex-column mb-12">
-            <div className="w-48">
+            <div
+              style={{ width: "50%", height: "240px"}}
+            >
               <Image
                 alt={FoodTitle}
                 src={foodImage[0].url}
-                width={300}
-                height={220}
-                loading="eager"
-                layout="responsive"
+                width="100%" height="100%" layout="responsive" objectFit="contain"
+                // width={300}
+                // height={220}
+                // loading="eager"
+                // layout="responsive"
               />
             </div>
             <div className="w-7/12 ml-4 flex flex-col justify-center">
-              <h1 style={{ color: "red" }}>{FoodTitle}</h1>
-              <h6>{foodCreatedAt}</h6>
+              <h1 className="font-mono text-xl text-orange-700">{FoodTitle}</h1>
+              <h6 className="text-orange-700 text-sm">{foodCreatedAt}</h6>
             </div>
           </div>
         );

@@ -9,7 +9,7 @@ const HomePage = ({ foods }) => {
 
         return (
           <div key={key} style={{ marginBottom: 40 }}>
-            <h1 style={{ color: "red" }}>{FoodTitle}</h1>
+            <h1 className="font-mono text-2xl text-orange-700">{FoodTitle}</h1>
             <h6>{FoodContent}</h6>
             <hr />
           </div>
@@ -21,7 +21,7 @@ const HomePage = ({ foods }) => {
 
 export default HomePage;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   const data = await fetch(`${url}/items`);
 

@@ -6,7 +6,6 @@ import url from "../utils/url";
 import { fakeUrl } from "../utils/url";
 
 const About = ({ about, categories, lastsPosts }) => {
-
   const { MainImage, Title, firstPartContent, secondPartContent, subTitle } =
     about[0].fields;
 
@@ -50,7 +49,7 @@ const About = ({ about, categories, lastsPosts }) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const data = await fetch(`${url}/about`);
   const categories = await fetch(`${url}/categories`);
   const lastsPosts = await fetch(`${url}/items`);
