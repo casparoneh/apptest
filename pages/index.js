@@ -1,4 +1,5 @@
 import React from "react";
+import url from "../utils/url";
 
 const HomePage = ({ foods }) => {
   return (
@@ -22,7 +23,7 @@ export default HomePage;
 
 export async function getServerSideProps() {
 
-  const data = await fetch("http://localhost:3000/api/items");
+  const data = await fetch(`${url}/items`);
 
   const response = await data.json();
 

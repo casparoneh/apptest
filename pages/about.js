@@ -2,8 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Sidebar from "../components/Sidebar";
 import Head from "next/head";
+import url from "../utils/url";
+import { fakeUrl } from "../utils/url";
 
 const About = ({ about, categories, lastsPosts }) => {
+
   const { MainImage, Title, firstPartContent, secondPartContent, subTitle } =
     about[0].fields;
 
@@ -14,7 +17,6 @@ const About = ({ about, categories, lastsPosts }) => {
         <meta name="description" content="Awesome Content for Food" />
       </Head>
 
-      
       <div className="container mx-auto flex 	flex-wrap">
         <div className="w-8/12">
           <h1 className="font-mono text-2xl text-orange-700">{Title}</h1>
@@ -49,9 +51,9 @@ const About = ({ about, categories, lastsPosts }) => {
 };
 
 export async function getServerSideProps() {
-  const data = await fetch("http://localhost:3000/api/about");
-  const categories = await fetch("http://localhost:3000/api/categories");
-  const lastsPosts = await fetch("http://localhost:3000/api/items");
+  const data = await fetch(`${url}/about`);
+  const categories = await fetch(`${url}/categories`);
+  const lastsPosts = await fetch(`${url}/items`);
 
   const response = await data.json();
   const categoriesResponse = await categories.json();
