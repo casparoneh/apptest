@@ -32,14 +32,15 @@ const About = ({ about, categories, lastsPosts }) => {
             /> */}
 
           <div
-            style={{ position: "relative", width: "100%", height: "500px" }}
+            style={{ position: "relative", width: "100%"}}
           >
             <Image
               src={MainImage[0].url}
               alt="Sunset"
-              layout="fill"
-              quality={100}
-            />
+              width="100%"
+              height={50}          
+              layout="responsive"
+            /> 
           </div>
 
           <p className="font-mono text-2xl text-orange-700 mt-12">{subTitle}</p>
