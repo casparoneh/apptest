@@ -26,7 +26,7 @@ const LastProducts = ({ lastsPosts }) => {
             </div>
             <div className="w-7/12 ml-4 flex flex-col justify-center">
               <h1 className="font-mono text-xl text-orange-700">{FoodTitle}</h1>
-              <h6 className="text-orange-700 text-sm">{foodCreatedAt}</h6>
+              <h2 className="text-orange-700 text-sm">{foodCreatedAt}</h2>
             </div>
           </div>
         );

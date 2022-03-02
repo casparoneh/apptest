@@ -22,16 +22,16 @@ const About = ({ about, categories, lastsPosts }) => {
 
           <p className="text-gray-700 my-4 text-justify">{firstPartContent}</p>
 
-          <div style={{ display: "block" }}>
+       
             <Image
               src={MainImage[0].url}
               alt="Sunset"
-              width={600}
-              height={450}
+              width="100%"
+              height={50}
               loading="eager"
               layout="responsive"
             />
-          </div>
+       
 
           <p className="font-mono text-2xl text-orange-700 mt-12">{subTitle}</p>
 
