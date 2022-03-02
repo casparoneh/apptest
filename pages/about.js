@@ -40,6 +40,7 @@ const About = ({ about, categories, lastsPosts }) => {
               width="100%"
               height={50}          
               layout="responsive"
+              
             /> 
           </div>
 
