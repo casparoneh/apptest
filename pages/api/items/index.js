@@ -1,8 +1,6 @@
-import getTable from "../../utils/getTable";
-
+import getTable from "../../../utils/getTable";
 
 const table = getTable("Food");
-
 
 export default async (_req, res) => {
   try {
@@ -13,3 +11,4 @@ export default async (_req, res) => {
     res.status(500).json({ msg: "Something went wrong! 😕" });
   }
 };
+

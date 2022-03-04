@@ -14,6 +14,7 @@ const HomePage = ({ foods }) => {
             <hr />
           </div>
         );
+        
       })}
     </div>
   );
@@ -22,7 +23,6 @@ const HomePage = ({ foods }) => {
 export default HomePage;
 
 export async function getStaticProps() {
-
   const data = await fetch(`${url}/items`);
 
   const response = await data.json();
