@@ -1,5 +1,5 @@
 import React from "react";
-import url from "../utils/url";
+import url from "../public/url";
 
 const HomePage = ({ foods }) => {
   return (

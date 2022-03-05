@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import url from "../../utils/url";
+import url from "../../public/url";
 
 const ProductDetails = ({ products }) => {
   //   const router = useRouter();
