@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Products = ({ lastsPosts }) => {
-  console.log(lastsPosts);
 
   // const {FoodImage,FoodContent,FoodMinutes,FoodPersons,FoodTitle} = lastsPosts;
 
@@ -34,9 +33,8 @@ const Products = ({ lastsPosts }) => {
           const id = product.id;
 
           return (
-            <Link href={`product/${id}`} passHref>
+            <Link href={`product/${id}`} passHref key={index}>
               <div
-                key={index}
                 className="w-full my-16 sm:w-5/12 lg:w-3/12 lg:mr-4 w-96 border-2 border-solid	border-amber-700 mb-4 px-4 py-4 cursor-pointer flex flex-col justify-between"
               >
                 <div>
